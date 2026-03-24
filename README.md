@@ -233,5 +233,5 @@ AndroidStudioProjects/
 
 ## 📄 License
 
-This project was developed as a **Final Year Academic Project** at [Your College Name].
+This project was developed as a **Final Year Academic Project**.
 All rights reserved © 2026 Pradeesh.
