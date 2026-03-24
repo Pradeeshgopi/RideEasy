@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_card"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Bus plate -->
+    <TextView
+        android:id="@+id/dialogNumberPlate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="TN 01 BE 2134"
+        android:textColor="@color/primary"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/divider" />
+
+    <!-- Destination -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Destination Stop"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/destinationSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/spinner_bg"
+        android:textColor="@color/text_white"
+        android:popupBackground="@color/bg_card_elevated" />
+
+    <!-- Passenger type -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Passenger Type"
+        android:textColor="@color/text_secondary"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/passengerTypeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radioAdult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Adult — Full fare"
+            android:textColor="@color/text_white"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Child — Half fare"
+            android:textColor="@color/text_white"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioSenior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senior Citizen — Half fare"
+            android:textColor="@color/text_white"
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioDisabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Differently Abled — Free"
+            android:textColor="@color/text_white"
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <!-- Price display -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/price_bg"
+        android:gravity="center"
+        android:paddingVertical="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fare: "
+            android:textColor="@color/text_secondary"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs. 5"
+            android:textColor="@color/primary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

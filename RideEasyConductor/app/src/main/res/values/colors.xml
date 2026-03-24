@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Backgrounds -->
+    <color name="bg_primary">#0A0E1A</color>
+    <color name="bg_card">#131929</color>
+    <color name="bg_card_elevated">#1C2541</color>
+    <color name="bg_input">#0D1117</color>
+
+    <!-- Accent -->
+    <color name="primary">#4F8EF7</color>
+    <color name="primary_dark">#2563EB</color>
+    <color name="primary_gradient_end">#7C3AED</color>
+
+    <!-- Crowd Status -->
+    <color name="status_free">#10B981</color>
+    <color name="status_free_bg">#0D2E22</color>
+    <color name="status_moderate">#F59E0B</color>
+    <color name="status_moderate_bg">#2D1F00</color>
+    <color name="status_crowded">#EF4444</color>
+    <color name="status_crowded_bg">#2D0A0A</color>
+
+    <!-- Text -->
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#94A3B8</color>
+    <color name="text_hint">#475569</color>
+    <color name="text_green">#10B981</color>
+    <color name="text_amber">#F59E0B</color>
+    <color name="text_red">#EF4444</color>
+
+    <!-- UI Elements -->
+    <color name="divider">#1E293B</color>
+    <color name="overlay_dark">#80000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+
+    <!-- Legacy color names for compatibility -->
+    <color name="colorPrimary">#4F8EF7</color>
+    <color name="colorPrimaryDark">#2563EB</color>
+    <color name="colorAccent">#4F8EF7</color>
+</resources>

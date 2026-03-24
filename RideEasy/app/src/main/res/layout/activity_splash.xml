@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoCard"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="#131929"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🚌"
+                android:textSize="52sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="RideEasy"
+        android:textColor="@color/text_primary"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Know before you go 🚍"
+        android:textColor="@color/text_secondary"
+        android:textSize="15sp"
+        android:alpha="0" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View android:id="@+id/dot1" android:layout_width="8dp" android:layout_height="8dp"
+            android:layout_marginEnd="6dp" android:background="@drawable/dot_shape_p" android:alpha="0.4"/>
+        <View android:id="@+id/dot2" android:layout_width="8dp" android:layout_height="8dp"
+            android:layout_marginEnd="6dp" android:background="@drawable/dot_shape_p" android:alpha="0.4"/>
+        <View android:id="@+id/dot3" android:layout_width="8dp" android:layout_height="8dp"
+            android:background="@drawable/dot_shape_p" android:alpha="0.4"/>
+    </LinearLayout>
+</LinearLayout>

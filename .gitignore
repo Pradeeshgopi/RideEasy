@@ -1,0 +1,34 @@
+# Android build artifacts
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+
+# App-specific generated
+**/build/
+**/.gradle/
+
+# Sensitive files — add these manually
+**/google-services.json
+**/app/src/main/assets/*.tflite
+
+# Gradle wrapper (keep gradle-wrapper.properties but ignore jar)
+!gradle/wrapper/gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+*.idea/
+*.iws
+*.ipr
+
+# OS
+Thumbs.db
+desktop.ini
