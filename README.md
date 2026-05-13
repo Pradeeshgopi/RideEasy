@@ -13,12 +13,12 @@ RideEasy is a full-stack Android system that lets passengers see **live bus loca
 ┌─────────────────┐     REST/Socket.IO     ┌──────────────────────┐
 │  Conductor App  │ ──── tickets + GPS ──▶ │  Node.js Backend     │
 │ (RideEasyCon.)  │                        │  (Kali Linux VM)     │
-└─────────────────┘                        │  MongoDB + Firebase  │
+└─────────────────┘                        │  MongoDB  │
                                            └──────────┬───────────┘
 ┌─────────────────┐     live crowd data              │
 │  Camera App     │ ──── entry/exit count ──▶        │
 │ (YOLOv8 TFLite) │                        ┌──────────▼───────────┐
-└─────────────────┘                        │  Firebase Realtime   │
+└─────────────────┘                        │  Realtime   │
                                            │  Database            │
 ┌─────────────────┐     real-time push     └──────────┬───────────┘
 │  Passenger App  │ ◀──── live updates ───────────────┘
@@ -77,10 +77,10 @@ Mounted at the bus door to count passengers automatically.
 | AI | TensorFlow Lite 2.14 (YOLOv8n) |
 | Maps | Google Maps SDK for Android |
 | Networking | OkHttp3 |
-| Real-time | Firebase Realtime Database, Socket.IO |
+| Real-time | Socket.IO |
 | Auth | JWT (JSON Web Tokens) |
 | Backend | Node.js + Express |
-| Database | MongoDB + Firebase |
+| Database | MongoDB |
 | Server OS | Kali Linux (Hyper-V VM) |
 
 ---
@@ -101,7 +101,6 @@ Mounted at the bus door to count passengers automatically.
 - Android Studio (Hedgehog or later)
 - Android phone with API 26+
 - Node.js backend running on your local network
-- Firebase project with Realtime Database enabled
 
 ### 1. Clone the Repository
 ```bash
@@ -120,21 +119,14 @@ public static final String SERVER_URL = "http://YOUR_WIFI_IP:3000";
 ```
 > Run `ipconfig` on Windows to find your WiFi IPv4 address.
 
-### 3. Add Firebase Config
-Place your `google-services.json` from Firebase Console into:
-```
-RideEasy/app/google-services.json
-RideEasyConductor/app/google-services.json
-```
-
-### 4. Add YOLOv8 Model
+### 3.Add YOLOv8 Model
 Place the model into:
 ```
 RideEasyCameraApp/app/src/main/assets/yolov8n_float32.tflite
 ```
 Download from: [Ultralytics YOLOv8](https://github.com/ultralytics/assets/releases)
 
-### 5. Start the Backend
+### 4. Start the Backend
 ```bash
 # On your Kali Linux server
 cd backend
@@ -143,7 +135,7 @@ node seed.js      # seed initial bus/conductor data
 node server.js    # start the API server
 ```
 
-### 6. Build & Run
+### 5. Build & Run
 Open each project folder in Android Studio separately:
 - `RideEasyConductor/` → Run on conductor's phone
 - `RideEasy/` → Run on passenger's phone
